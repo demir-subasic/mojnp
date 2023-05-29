@@ -1,12 +1,8 @@
-import './App.css';
-import News from './components/News/News';
+import "./App.css";
+import News from "./components/News/News";
 
 function App() {
-  return (
-    <>
-      <News />
-    </>
-  );
+    return <News />;
 }
 
 export default App;
