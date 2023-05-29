@@ -1,10 +1,17 @@
 import './App.css';
-import News from './components/News/News';
+import Footer from './components/DesktopUI/Footer/Footer';
+import Header from './components/DesktopUI/Header/Header';
+import News from './components/DesktopUI/News/News';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <News />
+      <Header />
+      <Routes>
+        <Route path="/" element={<News />} />
+      </Routes>
+      <Footer />
     </>
   );
 }
