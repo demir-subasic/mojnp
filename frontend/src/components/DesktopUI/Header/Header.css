@@ -1,18 +1,18 @@
-header {
+.Header-Desktop {
   background-color: #242424;
   margin-bottom: 12px;
 }
-header div {
+.Header-Desktop div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 12px 0;
 }
-header div img {
+.Header-Desktop div img {
   border-radius: 50%;
 }
-header div h1 span {
+.Header-Desktop div h1 span {
   color: purple;
 }
 nav {

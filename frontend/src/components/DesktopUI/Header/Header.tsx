@@ -3,7 +3,7 @@ import HeaderNavLink from './HeaderNavLink';
 
 const Header = () => {
   return (
-    <header>
+    <header className='Header-Desktop'>
       <div>
         <img alt="" src="https://picsum.photos/200/200" />
         <h1>

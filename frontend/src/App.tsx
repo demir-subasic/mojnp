@@ -1,19 +1,11 @@
 import './App.css';
-import Footer from './components/DesktopUI/Footer/Footer';
-import Header from './components/DesktopUI/Header/Header';
-import News from './components/DesktopUI/News/News';
-import { Routes, Route } from 'react-router-dom';
+import { useViewportSize } from '@mantine/hooks';
+import DesktopUI from './components/DesktopUI/DesktopUI';
+import MobileUI from './components/MobileUI/MobileUI';
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<News />} />
-      </Routes>
-      <Footer />
-    </>
-  );
+  const { width } = useViewportSize();
+  return <>{width <= 768 ? <MobileUI /> : <DesktopUI />}</>;
 }
 
 export default App;
