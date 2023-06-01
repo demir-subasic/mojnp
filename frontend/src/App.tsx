@@ -1,12 +1,11 @@
 import './App.css';
-import News from './components/News/News';
+import { useViewportSize } from '@mantine/hooks';
+import DesktopUI from './components/DesktopUI/DesktopUI';
+import MobileUI from './components/MobileUI/MobileUI';
 
 function App() {
-  return (
-    <>
-      <News />
-    </>
-  );
+  const { width } = useViewportSize();
+  return <>{width <= 768 ? <MobileUI /> : <DesktopUI />}</>;
 }
 
 export default App;
