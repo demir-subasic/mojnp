@@ -3,9 +3,8 @@ import HeaderNavLink from './HeaderNavLink';
 
 const Header = () => {
   return (
-    <header className='Header-Desktop'>
+    <header className="Header-Desktop">
       <div>
-        <img alt="" src="https://picsum.photos/200/200" />
         <h1>
           Moj<span>NP</span>
         </h1>
@@ -15,6 +14,9 @@ const Header = () => {
         <HeaderNavLink link="/tourism" textContent="Turizam" />
         <HeaderNavLink link="/report-a-problem" textContent="Prijavi Problem" />
       </nav>
+      <div>
+        <button>Sign in</button>
+      </div>
     </header>
   );
 };

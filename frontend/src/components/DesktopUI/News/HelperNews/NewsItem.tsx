@@ -28,8 +28,11 @@ const NewsItem: React.FC<NewsItemProps> = ({ news, active, onClick }) => {
     >
       <h4>{news.title}</h4>
       <div className="News-Item__date">
-        <AiOutlineCalendar />
-        <p>{news.date}</p>
+        <p>
+          {' '}
+          <AiOutlineCalendar />
+          {news.date}
+        </p>
       </div>
     </div>
   );

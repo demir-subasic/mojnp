@@ -15,7 +15,7 @@ const MainNews: React.FC<MainNewsProps> = ({ selectedNews }) => {
         className="News-Main__Container"
         style={{ backgroundImage: `url(${image})` }}
       >
-        <div className='News-Main__title'>
+        <div className="News-Main__title">
           <h2>{title}</h2>
           <p>
             <AiOutlineCalendar />
@@ -23,7 +23,7 @@ const MainNews: React.FC<MainNewsProps> = ({ selectedNews }) => {
           </p>
         </div>
       </div>
-      <span>{content}</span>
+      <p className='paragraph'>{content}</p>
     </div>
   );
 };
