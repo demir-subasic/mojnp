@@ -1,0 +1,23 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+    - name: backend
+      src: backend
+      engine: python3.9
+      primary: false
+      path: api
+      commands:
+          - pip install -r requirements.txt
+      run: uvicorn app.main:app --host 0.0.0.0 --port 8080
+      dev: uvicorn app.main:app --host 0.0.0.0 --port 8080
+
+    # make a preset that works for deta for react app with vite
+    - name: frontend
+      src: frontend
+      engine: custom
+      primary: true
+      path: frontend
+      commands:
+          - npm install
+      run: npm run serve
+      dev: npm run dev
