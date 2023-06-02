@@ -1,0 +1,19 @@
+.Footer-Desktop {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px 0;
+  margin-top: 12px;
+  box-shadow: 5px 0 7px #ddd;
+}
+.Footer-Desktop p {
+  margin: 0;
+}
+.Footer-Desktop a {
+  color: blue;
+  transition: 200ms;
+}
+.Footer-Desktop a:hover {
+  color: rgb(0, 191, 255);
+  transition: 200ms;
+}
