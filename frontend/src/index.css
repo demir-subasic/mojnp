@@ -4,11 +4,11 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: white;
-  background-color: #242424;
+  background-color: #f6f6f6;
+  color: #2f2f2f;
 
-  width: 80%;
-  margin: 0 auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

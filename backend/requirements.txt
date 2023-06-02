@@ -1,7 +1,5 @@
 fastapi
 uvicorn[standard]
 pymongo
-typing[all]
 pydantic
-pyton-multipart
 fastapi-utils
