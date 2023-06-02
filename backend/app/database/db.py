@@ -1,6 +1,7 @@
 from deta import Deta, _Base
+import os
 
 
 def connect_to_db(db_name) -> _Base:
-    deta = Deta("a08oz0mp_muR9UbGnHCPbF98C9vGQhpPYDiX5hr2Q")
+    deta = Deta(os.environ["DETA_PROJECT_KEY"])
     return deta.Base(db_name)
