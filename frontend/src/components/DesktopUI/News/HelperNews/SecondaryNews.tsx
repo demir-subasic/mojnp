@@ -1,11 +1,10 @@
 import './HelperNews.css';
-import { NewsItem } from './NewsItem';
-import NewsItemComponent from './NewsItem';
+import NewsItem, { NewsItems } from './NewsItem';
 
 interface SecondaryNewsProps {
-  newsItems: NewsItem[];
-  onNewsItemClick: (news: NewsItem) => void;
-  selectedNews: NewsItem;
+  newsItems: NewsItems[];
+  onNewsItemClick: (news: NewsItems) => void;
+  selectedNews: NewsItems | null;
 }
 
 const SecondaryNews: React.FC<SecondaryNewsProps> = ({
@@ -13,17 +12,17 @@ const SecondaryNews: React.FC<SecondaryNewsProps> = ({
   onNewsItemClick,
   selectedNews,
 }) => {
-  const handleNewsItemClick = (news: NewsItem) => {
+  const handleNewsItemClick = (news: NewsItems) => {
     onNewsItemClick(news);
   };
 
   return (
     <div className="Secondary-News__Container">
       {newsItems.map(news => (
-        <NewsItemComponent
-          key={news.id}
+        <NewsItem
+          key={news.linkId}
           news={news}
-          active={selectedNews.id === news.id}
+          active={selectedNews?.linkId === news.linkId}
           onClick={handleNewsItemClick}
         />
       ))}

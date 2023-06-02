@@ -6,6 +6,9 @@
   padding: 12px 24px;
   border: 1px solid #888;
   overflow-y: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .News-Main {
   max-width: 960px;
@@ -32,6 +35,9 @@
 .News-Item__date {
   display: flex;
   align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .News-Item {
   position: relative;
