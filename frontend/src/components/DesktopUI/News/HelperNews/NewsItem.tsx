@@ -1,18 +1,18 @@
 import './HelperNews.css';
 import { AiOutlineCalendar } from 'react-icons/ai';
 
-export interface NewsItem {
-  id: number;
+export interface NewsItems {
+  linkId: string;
   title: string;
-  date: string;
+  published: string;
   content: string;
   image: string;
 }
 
 interface NewsItemProps {
-  news: NewsItem;
+  news: NewsItems;
   active: boolean;
-  onClick: (news: NewsItem) => void;
+  onClick: (news: NewsItems) => void;
 }
 
 const NewsItem: React.FC<NewsItemProps> = ({ news, active, onClick }) => {
@@ -31,7 +31,7 @@ const NewsItem: React.FC<NewsItemProps> = ({ news, active, onClick }) => {
         <p>
           {' '}
           <AiOutlineCalendar />
-          {news.date}
+          {news.published}
         </p>
       </div>
     </div>
