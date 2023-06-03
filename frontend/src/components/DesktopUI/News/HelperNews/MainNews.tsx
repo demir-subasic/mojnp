@@ -1,29 +1,29 @@
 import './HelperNews.css';
 import { AiOutlineCalendar } from 'react-icons/ai';
-import { NewsItem } from './NewsItem';
+import { NewsItems } from './NewsItem';
 
 interface MainNewsProps {
-  selectedNews: NewsItem;
+  selectedNews: NewsItems;
 }
 
 const MainNews: React.FC<MainNewsProps> = ({ selectedNews }) => {
-  const { title, image, date, content } = selectedNews;
+  const { title, image, published, content } = selectedNews;
 
   return (
     <div className="News-Main">
       <div
-        className="News-Main__Container"
+        className="News-Main__Image"
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="News-Main__title">
           <h2>{title}</h2>
           <p>
             <AiOutlineCalendar />
-            {date}
+            {published}
           </p>
         </div>
       </div>
-      <p className='paragraph'>{content}</p>
+      <p className="paragraph">{content}</p>
     </div>
   );
 };
