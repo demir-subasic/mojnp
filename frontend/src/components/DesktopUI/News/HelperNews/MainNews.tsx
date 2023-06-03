@@ -12,7 +12,7 @@ const MainNews: React.FC<MainNewsProps> = ({ selectedNews }) => {
   return (
     <div className="News-Main">
       <div
-        className="News-Main__Container"
+        className="News-Main__Image"
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="News-Main__title">

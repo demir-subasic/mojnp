@@ -3,6 +3,14 @@ import MainNews from './HelperNews/MainNews';
 import SecondaryNews from './HelperNews/SecondaryNews';
 import { useEffect, useState } from 'react';
 import { NewsItems } from './HelperNews/NewsItem';
+import axios from 'axios';
+
+const apiUrl: string = import.meta.env.VITE_NEWS_API;
+
+console.log(apiUrl);
+
+console.log(import.meta);
+
 
 const News = () => {
   const [newsItems, setNewsItems] = useState<NewsItems[]>([]);
@@ -12,11 +20,27 @@ const News = () => {
     setSelectedNews(news);
   };
 
+  const decodeHTML = (htmlString: string): string => {
+    const doc = new DOMParser().parseFromString(htmlString, 'text/html');
+    return doc.documentElement.textContent || '';
+  };
+
+  const newsApi = async () => {
+    try {
+      const response = await axios.get(apiUrl);
+      const decodedData = response.data.map((item: NewsItems) => ({
+        ...item,
+        title: decodeHTML(item.title),
+        content: decodeHTML(item.content),
+      }));
+      setNewsItems(decodedData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    fetch('https://api.mojnovipazar.info/news/')
-      .then(response => response.json())
-      .then(data => setNewsItems(data))
-      .catch(error => console.error(error));
+    newsApi();
   }, []);
 
   useEffect(() => {
