@@ -1,5 +1,9 @@
+feedparser
+deta
 fastapi
 uvicorn[standard]
-pymongo
 pydantic
+python-multipart
+openai
 fastapi-utils
+httpx

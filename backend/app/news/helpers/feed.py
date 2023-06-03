@@ -1,7 +1,18 @@
-import re
+import re,os
 
-import feedparser
+import html
 from app.news.data_access.news import DataLayer
+
+try:
+    import feedparser
+except ImportError:
+    try:
+        os.system("pip install feedparser")
+        import feedparser
+    except:
+        os.system("pip3 install feedparser")
+        import feedparser
+
 
 db = DataLayer()
 
@@ -18,12 +29,12 @@ def _extract_image_from_content(item):
 
 def _parse_item(item, url, image):
     return {
-        "title": item.title,
+        "title": html.unescape(item.title),
         "link": item.link,
-        "summary": re.sub(r"<[^>]*>", "", item.description),
+        "summary": html.unescape(re.sub(r"<[^>]*>", "", item.description)),
         "published": item.published[5:16],
         "author": url.split("/")[2],
-        "content": re.sub(r"<[^>]*>", "", item.content[0].value),
+        "content": html.unescape(re.sub(r"<[^>]*>", "", item.content[0].value)),
         "image": image,
         "linkId": "-".join(str(item.link).split("/")[-2:]),
     }

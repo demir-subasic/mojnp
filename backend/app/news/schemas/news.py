@@ -9,5 +9,4 @@ class Article(BaseModel):
     published: str
     image:str
     summary: str
-    
     content: str
