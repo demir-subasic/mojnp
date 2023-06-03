@@ -4,8 +4,6 @@ import SecondaryNews from './HelperNews/SecondaryNews';
 import { useEffect, useState } from 'react';
 import { NewsItems } from './HelperNews/NewsItem';
 
-const apiUrl: string = import.meta.env.VITE_NEWS_API;
-
 const News = () => {
   const [newsItems, setNewsItems] = useState<NewsItems[]>([]);
   const [selectedNews, setSelectedNews] = useState<NewsItems | null>(null);
@@ -15,7 +13,7 @@ const News = () => {
   };
 
   useEffect(() => {
-    fetch(apiUrl)
+    fetch('https://api.mojnovipazar.info/news/')
       .then(response => response.json())
       .then(data => setNewsItems(data))
       .catch(error => console.log(error));
