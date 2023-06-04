@@ -122,6 +122,7 @@
   z-index: 1;
   color: #f6f6f6;
 }
-svg {
+.News-Item svg,
+.News-Main svg {
   margin-right: 6px;
 }
