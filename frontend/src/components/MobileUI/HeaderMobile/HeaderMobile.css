@@ -16,7 +16,7 @@
   left: 0;
 }
 .Header-Mobile nav div a {
-  color: #242424;
+  color: #4d4d4d;
   font-size: 19px;
   padding: 5px 10px;
   background-color: #f6f6f6;
@@ -53,5 +53,6 @@
   color: #3af;
 }
 .Header-Mobile nav.open svg {
+  background-color: #3a7ef2;
   color: orangered;
 }

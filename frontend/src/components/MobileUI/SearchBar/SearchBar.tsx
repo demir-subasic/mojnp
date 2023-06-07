@@ -2,10 +2,14 @@ import './SearchBar.css';
 import { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-const SearchBar = ({ onSearch }: { onSearch: (query: string) => void }) => {
+interface SearchBarProps {
+  onSearch: (query: string) => void;
+}
+
+const SearchBar = ({ onSearch }: SearchBarProps) => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const handleKeyDown = (event: any) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       onSearch(searchQuery);
     }
