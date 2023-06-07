@@ -7,7 +7,7 @@ interface MainNewsProps {
 }
 
 const MainNews: React.FC<MainNewsProps> = ({ selectedNews }) => {
-  const { title, image, published, content } = selectedNews;
+  const { title, image, published, content, author } = selectedNews;
 
   return (
     <div className="News-Main">
@@ -24,6 +24,7 @@ const MainNews: React.FC<MainNewsProps> = ({ selectedNews }) => {
         </div>
       </div>
       <p className="paragraph">{content}</p>
+      <p style={{marginBottom: '0', color: 'gray'}}>Preuzeto: {author}</p>
     </div>
   );
 };
