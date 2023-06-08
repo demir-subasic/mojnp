@@ -1,0 +1,25 @@
+.News {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 2% auto;
+    text-align: left;
+    .News-Main__Image-Container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .News-Main-News {
+        overflow-y: scroll;
+        height: 80vh;
+        width: 70%;
+    }
+    .News-Secondary-News {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: none;
+        height: 80vh;
+        width: 30%;
+    }
+}
