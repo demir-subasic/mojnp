@@ -2,14 +2,19 @@ import './NewsMobile.css';
 import { useEffect, useState } from 'react';
 import SecondaryNewsMobile from './HelperNewsMobile/SecondaryNewsMobile';
 import { NewsItems } from './HelperNewsMobile/NewsItemMobile';
+import SearchBar from '../SearchBar/SearchBar';
 
-const NewsMobile = ({ searchResults }: { searchResults: NewsItems[] }) => {
-  const [newsItems, setNewsItems] = useState<NewsItems[]>(searchResults);
-  const [selectedNews, setSelectedNews] = useState<NewsItems | null>(null);
+const NewsMobile = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [newsItems, setNewsItems] = useState<NewsItems[]>([]);
 
-  const handleNewsItemClick = (news: NewsItems) => {
-    setSelectedNews(news);
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
   };
+
+  const filteredNewsItems = newsItems.filter((news: NewsItems) =>
+    news.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   useEffect(() => {
     fetch('https://api.mojnovipazar.info/news/')
@@ -18,26 +23,10 @@ const NewsMobile = ({ searchResults }: { searchResults: NewsItems[] }) => {
       .catch(error => console.log(error));
   }, []);
 
-  useEffect(() => {
-    if (newsItems.length > 0) {
-      setSelectedNews(newsItems[0]);
-    }
-  }, [newsItems]);
-
-  useEffect(() => {
-    if (searchResults.length > 0) {
-      setNewsItems(searchResults);
-      setSelectedNews(searchResults[0]);
-    }
-  }, [searchResults]);
-
   return (
     <div className="News-Secondary-Mobile">
-      <SecondaryNewsMobile
-        newsItems={newsItems}
-        onNewsItemClick={handleNewsItemClick}
-        selectedNews={selectedNews}
-      />
+      <SearchBar onSearch={handleSearch} />
+      <SecondaryNewsMobile newsItems={filteredNewsItems} />
     </div>
   );
 };
