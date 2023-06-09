@@ -12,13 +12,3 @@ micros:
 
       run: uvicorn app.main:app --host 0.0.0.0 --port 8080
       dev: uvicorn app.main:app --host 0.0.0.0 --port 8080
-
-    - name: frontend
-      src: frontend
-      engine: custom
-      primary: false
-      path: frontend
-      commands:
-          - npm install
-      run: npm run serve
-      dev: npm run dev
