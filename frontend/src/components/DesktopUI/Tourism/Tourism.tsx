@@ -1,7 +1,7 @@
 import './Tourism.scss';
 import TourismCardContainer from './HelperTourism/TourismCardContainer';
 
-const dummyData = [
+export const dummyData = [
   {
     id: 'islamski-spomenici1',
     content: 'Lorem ipsum dolor sit amet 1',
@@ -19,17 +19,17 @@ const dummyData = [
   },
   {
     id: 'restorani4',
-    content: 'Lorem ipsum dolor sit amet 1',
+    content: 'Lorem ipsum dolor sit amet 4',
     image: 'https://picsum.photos/200',
   },
   {
     id: 'hoteli5',
-    content: 'Lorem ipsum dolor sit amet 2',
+    content: 'Lorem ipsum dolor sit amet 5',
     image: 'https://picsum.photos/202',
   },
   {
     id: '6',
-    content: 'Lorem ipsum dolor sit amet 3',
+    content: 'Lorem ipsum dolor sit amet 6',
     image: 'https://picsum.photos/201',
   },
 ];
