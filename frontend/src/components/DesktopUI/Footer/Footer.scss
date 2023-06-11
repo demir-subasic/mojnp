@@ -1,0 +1,22 @@
+@import '../../../index.scss';
+
+.Footer-Desktop {
+  background-color: $background;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px 0;
+  margin-top: 12px;
+  box-shadow: 5px 0 7px #ddd;
+  p {
+    margin: 0;
+  }
+  a {
+    color: blue;
+    transition: 200ms;
+    &:hover {
+      color: rgb(0, 191, 255);
+      transition: 200ms;
+    }
+  }
+}

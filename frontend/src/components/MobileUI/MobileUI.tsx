@@ -15,7 +15,7 @@ const MobileUI = () => {
       <HeaderMobile />
       <Routes>
         <Route path="/" element={<NewsMobile />} />
-        <Route path=":linkId" element={<MainNewsFetchMobile />} />
+        <Route path="/:linkId" element={<MainNewsFetchMobile />} />
         <Route path="/tourism" element={<TourismMobile />} />
         <Route path="/report-a-problem" element={<ReportProblemMobile />} />
         <Route path="*" element={<NoPage />} />
