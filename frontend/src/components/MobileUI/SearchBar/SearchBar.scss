@@ -1,0 +1,24 @@
+.SearchBar {
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  height: 26px;
+  input {
+    background-color: whitesmoke;
+    color: #121212;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    margin: 0;
+  }
+  button {
+    border: none;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    background-color: #3a7ef2;
+    margin: 0;
+    svg {
+      font-size: 16px;
+      color: whitesmoke;
+    }
+  }
+}

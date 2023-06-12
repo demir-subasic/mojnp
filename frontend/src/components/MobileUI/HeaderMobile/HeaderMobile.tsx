@@ -1,4 +1,4 @@
-import './HeaderMobile.css';
+import './HeaderMobile.scss';
 import { useState } from 'react';
 import { RxHamburgerMenu, RxAvatar } from 'react-icons/rx';
 import { VscChromeClose } from 'react-icons/vsc';

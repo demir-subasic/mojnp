@@ -1,4 +1,4 @@
-import './ReportProblemMobile.css'
+import './ReportProblemMobile.scss'
 
 const ReportProblemMobile = () => {
   return (

@@ -1,4 +1,4 @@
-import './HeaderMobile.css';
+import './HeaderMobile.scss';
 import { NavLink } from 'react-router-dom';
 
 interface HeaderLink {

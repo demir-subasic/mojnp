@@ -1,4 +1,4 @@
-import './FooterMobile.css';
+import './FooterMobile.scss';
 
 const FooterMobile = () => {
   return (
