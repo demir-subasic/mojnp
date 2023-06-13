@@ -23,9 +23,8 @@ const TourismCard: React.FC<TourismCardProps> = ({ cards, onClick }) => {
         className="Tourism__card"
         style={{ backgroundImage: `url(${cards.image})` }}
         onClick={handleClick}
-      >
-        <h3>{cards.content}</h3>
-      </div>
+      ></div>
+      <h3>{cards.content}</h3>
     </Link>
   );
 };

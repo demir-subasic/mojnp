@@ -1,5 +1,7 @@
+@import '../../../index.scss';
+
 .Header-Mobile {
-  background-color: #f6f6f6;
+  background-color: $navigation;
   margin: 12px 0;
   box-shadow: 0 0 5px 2px #ddd;
   display: flex;
@@ -7,6 +9,7 @@
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 1000;
   nav {
     div {
       display: flex;
@@ -15,33 +18,44 @@
       position: absolute;
       left: 0;
       a {
-        color: #4d4d4d;
+        color: $lighttext;
         font-size: 19px;
         padding: 5px 10px;
         background-color: #f6f6f6;
         &:nth-child(odd) {
           border: 1px solid #ddd;
         }
-        &:hover {
-          background-color: #3af;
+        &:nth-child(1):hover {
+          background-color: $blue;
+        }
+        &:nth-child(2):hover {
+          background-color: $green;
+        }
+        &:nth-child(3):hover {
+          background-color: $red;
+        }
+        &:nth-child(1).active {
+          background-color: $blue;
+        }
+        &:nth-child(2).active {
+          background-color: $green;
+        }
+        &:nth-child(3).active {
+          background-color: $red;
+        }
+        &.active {
           color: white;
         }
-      }
-      a.active {
-        background-color: #3a7ef2;
-        color: white;
       }
     }
   }
   button {
-    background-color: #3a7ef2;
     border: none;
     padding: 7px 14px;
     box-shadow: 0 2px 5px 1px #ddd;
     border-radius: 0.3rem;
     transition: 200ms;
     &:hover {
-      background-color: #3af;
       transition: 200ms;
     }
   }
@@ -50,12 +64,11 @@
     display: flex;
     margin: 4px;
     &:hover {
-      color: #3af;
+      color: $blue;
     }
   }
   nav.open {
     svg {
-      background-color: #3a7ef2;
       color: orangered;
     }
   }

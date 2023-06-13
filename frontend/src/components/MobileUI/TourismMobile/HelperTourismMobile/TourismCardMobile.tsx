@@ -21,11 +21,15 @@ const TourismCardMobile: React.FC<TourismCardProps> = ({ cards, onClick }) => {
     <Link to={cards.id}>
       <div
         className="TourismMobile__card"
-        style={{ backgroundImage: `url(${cards.image})` }}
+        style={{
+          backgroundImage: `linear-gradient(to bottom,
+             rgba(0,0,0,0.01),
+             rgba(0,0,0,0.1),
+             rgba(0,0,0,0.8)),url(${cards.image})`,
+        }}
         onClick={handleClick}
-      >
-        <h3>{cards.content}</h3>
-      </div>
+      ></div>
+      <h3>{cards.content}</h3>
     </Link>
   );
 };

@@ -11,10 +11,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: $navigation;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
   height: 10vh;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   div {
@@ -22,17 +22,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-      border-radius: 50%;
-    }
-    h1 {
-      font-family: 'Code Pro';
-      margin: 0;
 
-      span {
-        color: $secondary;
-        font-size: 3vw;
-      }
+    img {
+      position: absolute;
+      bottom: -18px;
     }
   }
 
@@ -43,8 +36,8 @@
       display: flex;
       justify-content: space-evenly;
       button {
-        padding: 5% 10%;
-        background-color: $secondary;
+        padding: 12px 24px;
+        background-color: $red;
         color: #f6f6f6;
         border: none;
         font-size: 1vw;
@@ -57,7 +50,7 @@
           transform: translateY(-0.1vw);
         }
         &:nth-child(2) {
-          background-color: $primary;
+          background-color: $blue;
         }
       }
     }
@@ -79,13 +72,33 @@
       transition: all 0.3s ease;
       border-bottom: 2px solid transparent;
       &:hover {
-        color: $primary;
-        border-bottom: 2px solid $primary;
         transform: translateY(-0.1vw);
       }
-      &.active {
-        color: $primary;
-        border-bottom: 2px solid $primary;
+      &:nth-child(1):hover {
+        color: $blue;
+        border-bottom: 2px solid $blue;
+      }
+      &:nth-child(2):hover {
+        color: $green;
+        border-bottom: 2px solid $green;
+      }
+      &:nth-child(3):hover {
+        color: $red;
+        border-bottom: 2px solid $red;
+      }
+      &:nth-child(1).active {
+        color: $blue;
+        border-bottom: 2px solid $blue;
+        font-weight: 700;
+      }
+      &:nth-child(2).active {
+        color: $green;
+        border-bottom: 2px solid $green;
+        font-weight: 700;
+      }
+      &:nth-child(3).active {
+        color: $red;
+        border-bottom: 2px solid $red;
         font-weight: 700;
       }
     }

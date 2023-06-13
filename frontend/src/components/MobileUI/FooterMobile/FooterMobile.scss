@@ -1,3 +1,5 @@
+@import '../../../index.scss';
+
 .Footer-Mobile {
   display: flex;
   align-items: center;
@@ -5,7 +7,7 @@
   padding: 24px 0;
   margin-top: 12px;
   box-shadow: 5px 0 7px #ddd;
-  background-color: #f6f6f6;
+  background-color: $navigation;
   p {
     margin: 0;
   }

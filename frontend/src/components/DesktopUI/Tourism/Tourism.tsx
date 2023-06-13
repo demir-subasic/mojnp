@@ -1,35 +1,36 @@
 import './Tourism.scss';
 import TourismCardContainer from './HelperTourism/TourismCardContainer';
+import TourismAnimation from './HelperTourism/TourismAnimation';
 
 export const dummyData = [
   {
     id: 'islamski-spomenici1',
-    content: 'Lorem ipsum dolor sit amet 1',
+    content: 'Islamski Spomenici',
     image: 'https://picsum.photos/203',
   },
   {
     id: 'hriscanski-spomenici2',
-    content: 'Lorem ipsum dolor sit amet 2',
+    content: 'Hriscanski Spomenici',
     image: 'https://picsum.photos/198',
   },
   {
     id: 'sruseni-spomenici3',
-    content: 'Lorem ipsum dolor sit amet 3',
+    content: 'Sruseni Spomenici',
     image: 'https://picsum.photos/199',
   },
   {
     id: 'restorani4',
-    content: 'Lorem ipsum dolor sit amet 4',
+    content: 'Restorani',
     image: 'https://picsum.photos/200',
   },
   {
     id: 'hoteli5',
-    content: 'Lorem ipsum dolor sit amet 5',
+    content: 'Hoteli',
     image: 'https://picsum.photos/202',
   },
   {
-    id: '6',
-    content: 'Lorem ipsum dolor sit amet 6',
+    id: 'mapa6',
+    content: 'Mape',
     image: 'https://picsum.photos/201',
   },
 ];
@@ -41,9 +42,10 @@ const Tourism = () => {
 
   return (
     <div className="Tourism">
-      <div className="Tourism__image-container">
-        <h2>Upoznajte Nas Grad</h2>
-        <h3>Upoznajte Nas Grad</h3>
+      <TourismAnimation />
+      <div className="Tourism__title">
+        <h1>Vas vodic za gradski odmor u Novom Pazaru</h1>
+        <span>Mali grad velike duse</span>
       </div>
       <TourismCardContainer cards={dummyData} onCardClick={handleCardClick} />
     </div>
