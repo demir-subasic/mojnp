@@ -3,7 +3,7 @@ import '../Tourism.scss';
 
 export interface TourismCards {
   id: string;
-  content: string;
+  title: string;
   image: string;
 }
 
@@ -21,10 +21,14 @@ const TourismCard: React.FC<TourismCardProps> = ({ cards, onClick }) => {
     <Link to={cards.id}>
       <div
         className="Tourism__card"
-        style={{ backgroundImage: `url(${cards.image})` }}
+        style={{
+          backgroundImage: `linear-gradient(to bottom,
+          rgba(120,120,120,0.1),
+          rgba(120,120,120,0.1)),url(${cards.image})`,
+        }}
         onClick={handleClick}
       ></div>
-      <h3>{cards.content}</h3>
+      <h3>{cards.title}</h3>
     </Link>
   );
 };

@@ -1,25 +1,33 @@
 @import '../../../index.scss';
 
 .Tourism {
+  .Tourism__animation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+  }
+
   .Tourism__title {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
 
     h1 {
       font-size: 60px;
       font-family: Georgia, Times, 'Times New Roman', serif;
       letter-spacing: 1px;
       margin-bottom: 0;
+      width: 51%;
     }
 
     span {
       margin-bottom: 40px;
       font-size: 22px;
       font-family: Georgia, Times, 'Times New Roman', serif;
+      width: 50%;
     }
   }
 
@@ -28,12 +36,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 85%;
-    margin: 0 auto;
 
     a {
       transition: 300ms;
-      margin: 0 12px;
+      margin: 12px 22px;
 
       &:hover {
         transition: 500ms;
@@ -42,13 +48,10 @@
 
       h3 {
         transition: 300ms;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         color: $text;
         font-size: 22px;
-        margin: 0;
-        color: $text;
+        font-family: Georgia, Times, 'Times New Roman', serif;
+        margin: 12px 0 4px 12px;
       }
 
       &:hover h3 {
@@ -58,17 +61,15 @@
     }
 
     .Tourism__card {
-      margin: 12px 0;
       padding: 12px 18px;
-      min-height: 200px;
-      height: 300px;
-      max-height: 400px;
-      width: 400px;
+      height: 23vw;
+      width: 23vw;
       display: flex;
       align-items: flex-end;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      border-radius: 30px;
     }
   }
 }

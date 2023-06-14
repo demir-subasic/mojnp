@@ -3,7 +3,7 @@ import '../TourismMobile.scss';
 
 export interface TourismCards {
   id: string;
-  content: string;
+  title: string;
   image: string;
 }
 
@@ -23,13 +23,12 @@ const TourismCardMobile: React.FC<TourismCardProps> = ({ cards, onClick }) => {
         className="TourismMobile__card"
         style={{
           backgroundImage: `linear-gradient(to bottom,
-             rgba(0,0,0,0.01),
-             rgba(0,0,0,0.1),
-             rgba(0,0,0,0.8)),url(${cards.image})`,
+             rgba(120,120,120,0.1),
+             rgba(120,120,120,0.1)),url(${cards.image})`,
         }}
         onClick={handleClick}
       ></div>
-      <h3>{cards.content}</h3>
+      <h3>{cards.title}</h3>
     </Link>
   );
 };

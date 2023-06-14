@@ -6,8 +6,8 @@ const TourismAnimation = () => {
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       viewBox="0 0 480 399"
-      width="480"
-      height="399"
+      width="100%"
+      height="100%"
     >
       <g strokeWidth="2.00" fill="none" strokeLinecap="butt">
         <path
