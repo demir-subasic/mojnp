@@ -1,11 +1,20 @@
 import './HeaderMobile.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RxHamburgerMenu, RxAvatar } from 'react-icons/rx';
 import { VscChromeClose } from 'react-icons/vsc';
 import HeaderMobileNavLink from './HeaderMobileNavLink';
+import Logo from '../../../Images/Kula_motrilja.png';
 
 const HeaderMobile = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    if (isDropdownOpen) {
+      document.body.style.position = 'fixed';
+    } else {
+      document.body.style.position = '';
+    }
+  }, [isDropdownOpen]);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(prevState => !prevState);
@@ -14,6 +23,7 @@ const HeaderMobile = () => {
   return (
     <header className="Header-Mobile">
       <RxAvatar />
+      <img src={Logo} alt="" width='30px' height='40px' />
       <nav
         className={`${isDropdownOpen ? 'open' : ''}`}
         onClick={toggleDropdown}
