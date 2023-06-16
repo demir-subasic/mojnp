@@ -59,15 +59,38 @@
     }
 
     .Tourism__card {
+      border-radius: 30px;
       padding: 12px 18px;
-      height: 23vw;
-      width: 23vw;
+      height: 16vw;
+      width: 16vw;
+      background-color: rgb(200, 200, 200);
       display: flex;
       align-items: flex-end;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      border-radius: 30px;
+      // background-position: center;
+      // background-repeat: no-repeat;
+      // background-size: cover;
     }
+  }
+  .Tourism__title {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: 0.3s;
+  }
+
+  .Tourism__title.fade-in-from-bottom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .Tourism__card-link {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .Tourism__card-link.fade-in-from-bottom {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

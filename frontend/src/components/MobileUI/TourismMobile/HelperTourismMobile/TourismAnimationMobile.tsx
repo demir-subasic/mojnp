@@ -34,7 +34,7 @@ const TourismAnimationMobile = () => {
       xmlSpace="preserve"
       className={isActive ? 'active' : ''}
       width="100%"
-      height="91vh"
+      height="85vh"
     >
       <style type="text/css">
         {`
