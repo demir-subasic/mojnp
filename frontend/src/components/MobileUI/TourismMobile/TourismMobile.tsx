@@ -41,13 +41,9 @@ const TourismMobile = () => {
   const cardsRef = useRef<any[]>([]);
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  const titleElement = titleRef.current;
-
   setTimeout(() => {
-    if (titleElement) {
-      titleElement.classList.add('fade-in-from-bottom');
-      setHasAnimated(true);
-    }
+    titleRef.current?.classList.add('fade-in-from-bottom');
+    setHasAnimated(true);
   }, 2000);
 
   const handleScroll = () => {
