@@ -12,7 +12,6 @@ const TourismSection: React.FC<TourismSectionProps> = ({ cards }) => {
 
   return (
     <div className="Tourism-Section">
-      <img src={renderItem?.image} alt="" />
       <p>{renderItem?.title}</p>
     </div>
   );
