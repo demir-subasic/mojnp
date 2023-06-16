@@ -1,4 +1,4 @@
-import './HelperNewsMobile.css';
+import './HelperNewsMobile.scss';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { NewsItems } from './NewsItemMobile';
 import { useParams } from 'react-router-dom';

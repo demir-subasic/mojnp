@@ -1,0 +1,96 @@
+@import '../../../index.scss';
+
+.TourismMobile {
+  .TourismMobile__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 34px;
+      font-family: Georgia, Times, 'Times New Roman', serif;
+      margin: 0 0 12px 0;
+    }
+
+    span {
+      margin-bottom: 20px;
+      font-size: 19px;
+      font-family: Georgia, Times, 'Times New Roman', serif;
+    }
+  }
+
+  .TourismMobile__card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      transition: 300ms;
+      padding: 8px 12px;
+      &:hover {
+        transition: 500ms;
+        transform: translateY(-5px);
+      }
+
+      h3 {
+        transition: 300ms;
+        color: $text;
+        font-size: 21px;
+        margin: 12px 0 4px 12px;
+        font-family: Georgia, Times, 'Times New Roman', serif;
+      }
+
+      &:hover h3 {
+        transition: 300ms;
+        color: $green;
+      }
+    }
+
+    .TourismMobile__card {
+      border-radius: 30px;
+      margin: 12px 0;
+      padding: 12px 18px;
+      height: 270px;
+      width: 270px;
+      background-color: rgb(200, 200, 200);
+      display: flex;
+      align-items: flex-end;
+      // background-position: center;
+      // background-repeat: no-repeat;
+      // background-size: cover;
+
+      @media screen and (max-width: 330px) {
+        padding: 12px 0;
+        margin: 4px 0;
+        width: 200px;
+        height: 200px;
+        font-size: 16px;
+      }
+    }
+  }
+  .TourismMobile__title {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .TourismMobile__title.fade-in-from-bottom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .TourismMobile__card-link {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .TourismMobile__card-link.fade-in-from-bottom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

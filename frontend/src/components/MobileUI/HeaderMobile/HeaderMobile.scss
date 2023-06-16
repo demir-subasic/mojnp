@@ -1,0 +1,81 @@
+@import '../../../index.scss';
+
+.Header-Mobile {
+  background-color: $navigation;
+  margin: 12px 0;
+  box-shadow: 0 0 5px 2px #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 7vh;
+  z-index: 1000;
+  nav {
+    div {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      a {
+        color: $lighttext;
+        display: flex;
+        height: 31vh;
+        font-size: 36px;
+        background-color: $navigation;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(2) {
+          border-top: 2px solid #ddd;
+          border-bottom: 2px solid #ddd;
+        }
+        &:nth-child(1):hover {
+          background-color: $blue;
+        }
+        &:nth-child(2):hover {
+          background-color: $green;
+        }
+        &:nth-child(3):hover {
+          background-color: $red;
+        }
+        &:nth-child(1).active {
+          background-color: $blue;
+        }
+        &:nth-child(2).active {
+          background-color: $green;
+        }
+        &:nth-child(3).active {
+          background-color: $red;
+        }
+        &.active {
+          color: white;
+        }
+      }
+    }
+  }
+  button {
+    border: none;
+    padding: 7px 14px;
+    box-shadow: 0 2px 5px 1px #ddd;
+    border-radius: 0.3rem;
+    transition: 200ms;
+    &:hover {
+      transition: 200ms;
+    }
+  }
+  svg {
+    font-size: 44px;
+    display: flex;
+    margin: 0 8px;
+    &:hover {
+      color: $blue;
+    }
+  }
+  nav.open {
+    svg {
+      color: orangered;
+    }
+  }
+}

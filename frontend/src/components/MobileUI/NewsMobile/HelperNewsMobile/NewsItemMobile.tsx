@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './HelperNewsMobile.css';
+import './HelperNewsMobile.scss';
 import { AiOutlineCalendar } from 'react-icons/ai';
 
 export interface NewsItems {
@@ -18,7 +18,7 @@ interface NewsItemProps {
 
 const NewsItem: React.FC<NewsItemProps> = ({ news }) => {
   return (
-    <Link to={`/${news.linkId}`} className='News-Item-Mobile__content' >
+    <Link to={`/${news.linkId}`} className="News-Item-Mobile__content">
       <div className="News-Item-Mobile">
         <img src={news.image} alt="" />
         <h4>{news.title}</h4>
@@ -33,7 +33,7 @@ const NewsItem: React.FC<NewsItemProps> = ({ news }) => {
           style={{
             marginBottom: '0',
             fontSize: '14px',
-            color: 'gray',
+            color: 'rgb(100, 100, 100)',
             borderBottom: '1px solid lightgray',
           }}
         >

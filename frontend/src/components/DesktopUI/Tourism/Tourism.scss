@@ -1,0 +1,96 @@
+@import '../../../index.scss';
+
+.Tourism {
+  .Tourism__animation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Tourism__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 60px;
+      font-family: Georgia, Times, 'Times New Roman', serif;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+      width: 51%;
+    }
+
+    span {
+      margin-bottom: 40px;
+      font-size: 22px;
+      font-family: Georgia, Times, 'Times New Roman', serif;
+      width: 50%;
+    }
+  }
+
+  .Tourism__card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      transition: 300ms;
+      margin: 12px 22px;
+
+      &:hover {
+        transition: 500ms;
+        transform: translateY(-5px);
+      }
+
+      h3 {
+        transition: 300ms;
+        color: $text;
+        font-size: 22px;
+        font-family: Georgia, Times, 'Times New Roman', serif;
+        margin: 12px 0 4px 12px;
+      }
+
+      &:hover h3 {
+        transition: 300ms;
+        color: $green;
+      }
+    }
+
+    .Tourism__card {
+      border-radius: 30px;
+      padding: 12px 18px;
+      height: 16vw;
+      width: 16vw;
+      background-color: rgb(200, 200, 200);
+      display: flex;
+      align-items: flex-end;
+      // background-position: center;
+      // background-repeat: no-repeat;
+      // background-size: cover;
+    }
+  }
+  .Tourism__title {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: 0.3s;
+  }
+
+  .Tourism__title.fade-in-from-bottom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .Tourism__card-link {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .Tourism__card-link.fade-in-from-bottom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

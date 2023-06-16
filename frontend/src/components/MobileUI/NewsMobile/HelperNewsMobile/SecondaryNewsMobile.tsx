@@ -1,4 +1,4 @@
-import './HelperNewsMobile.css';
+import './HelperNewsMobile.scss';
 import NewsItemMobile, { NewsItems } from './NewsItemMobile';
 
 interface SecondaryNewsProps {

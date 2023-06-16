@@ -1,0 +1,28 @@
+@import '../../../index.scss';
+
+.SearchBar {
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  height: 26px;
+  input {
+    background-color: $navigation;
+    color: $text;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    margin: 0;
+  }
+  button {
+    border: none;
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    background-color: $blue;
+    margin: 0;
+    svg {
+      font-size: 16px;
+      color: $navigation;
+    }
+  }
+}
